@@ -1,4 +1,4 @@
-import { disableButtons, sol, heading, askToPlay } from "./index.js";
+import { disableButtons, sol, heading, askToPlay, buttons } from "./index.js";
 export function checkRow(row, player){
     row -= 1;
     for(let i = 0+row*3; i < 3+row*3; i++){
@@ -72,6 +72,8 @@ export function checkAllColumn(){
     }
 }
 
+
+
 export function checkDiagonal(player){
     if(sol[0] === sol[4] && sol[4] === sol[8] && sol[8] === player){
         return true;
@@ -80,6 +82,7 @@ export function checkDiagonal(player){
         return true;
     }
 }
+
 
 
 export function checkWin(){
@@ -105,4 +108,8 @@ export function checkWin(){
         return true;
         
     }
+    // if(checkAllFull()){
+    //     location.reload()
+    //     return false;
+    // }
 }
