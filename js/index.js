@@ -22,7 +22,7 @@ for(let i = 0; i < buttons.length; i++){
             setTimeout(()=>{
                 askToPlay();
             },3000)
-            location.reload()
+            //location.reload()
         }
         if(checkAllFull()){
             console.log("Here")
