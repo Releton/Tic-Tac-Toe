@@ -1,7 +1,7 @@
 import { checkWin } from "./logic.js";
 let count = 1;
 
-let buttons = document.querySelectorAll(".button");
+export let buttons = document.querySelectorAll(".button");
 export const heading = document.querySelector(".head-text")
 export let sol = [0,0,0,0,0,0,0,0,0]
 
@@ -22,7 +22,13 @@ for(let i = 0; i < buttons.length; i++){
             setTimeout(()=>{
                 askToPlay();
             },3000)
+            location.reload()
         }
+        if(checkAllFull()){
+            console.log("Here")
+            location.reload()
+        }
+
     })
 }
 export function disableButtons(){
@@ -36,4 +42,12 @@ export function askToPlay(){
     if(confirm("Press Ok to play again!")){
         location.reload();
     }
+}
+export function checkAllFull(){
+    for(let i = 0; i < sol.length; i++){
+        if(sol[i] === 0){
+            return false;
+        }
+    }
+    return true;
 }
