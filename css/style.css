@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(59, 58, 61);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    /* text-align: center; */
+}
+
+.heading{
+    font-family: cursive;
+    font-size: 5vmin;
+    color: white;
+    margin-bottom: 3rem;
+}
+.head-text{
+    text-shadow: 3px 0 #DA0463;
+
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 70vmin;
+    height: 70vmin;
+    margin: 0 auto;
+}
+.x-mark{
+    background: url('https://www.pngkey.com/png/full/615-6157958_x-mark-png.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.o-mark{
+    background: url('https://freetictactoe.com/images/mark-o.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+footer p{
+    color: white;
+    font-size: 3.5vmin;
+
+}
